@@ -1,0 +1,93 @@
+%P
+mech.disable_servicing;
+
+mech.uncap;
+mech.wait_engine 1;
+udw.com @Sleep  2(sec)
+
+mech.carriage_board 1;
+mech.carriage_move_abs 6, 2400, 6000;
+
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+mech.carriage_move_abs 20, 28500, 6000;
+mech.carriage_move_abs 20, 2400, 6000;
+
+mech.cap;
+
+udw.quit;
+%-12345X

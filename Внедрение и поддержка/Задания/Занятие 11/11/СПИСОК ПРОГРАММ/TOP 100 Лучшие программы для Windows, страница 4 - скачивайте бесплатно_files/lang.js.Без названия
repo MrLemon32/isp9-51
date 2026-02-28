@@ -1,0 +1,48 @@
+var LOCALIZATION = {
+    "LANGUAGE": "RUSSIAN",
+    "WARNING": "Предупреждение!",
+    "LOADING": "Подождите, идет загрузка",
+    "WELCOME": "Привет %s, как вы?",
+
+    "INDEX_READ_MORE": "Читать далее",
+
+    "LG_QS_ADMIN_CLOSE": "закрыть",
+    "LG_QS_ADMIN_OPEN": "открыть",
+
+    "LG_QS_SUBSC_UNSUBSC": "Отписаться от ответов",
+    "LG_QS_SUBSC_SUBSC": "Подписаться на новые ответы",
+
+    "LG_QS_USABLE_THANKS": "Спасибо за ваш голос! Вы очень помогли другим пользователям.",
+    "LG_QS_USABLE_ERROR": "Видимо вы уже голосовали",
+
+    "LG_QS_SPAMQ": "Ваша заявка принята. Наши редакторы постараются отреагировать как можно скорее.",
+    "LG_QS_SPAMA": "Ваша заявка принята. Наши редакторы постараются отреагировать как можно скорее.",
+    "LG_QS_SELPARENT_VIEW": "Смотреть",
+    "LG_QS_SELPARENT_FLUSH": "Сбросить",
+
+    "LG_QS_AGREED_ERROR_NOBESTSEL": "Для решения необходимо выбрать лучший ответ!",
+
+    "LG_QS_SELPARENT_NO": "Нет",
+
+    "LG_QS_SEARCH_AC_ANSWERS": "Ответов",
+    "LG_QS_SEARCH_AC_GO": "Перейти",
+
+    "LG_MAIN_PHOTO_ADD_FILE": "Файл",
+    "LG_MAIN_PHOTO_ADD_ERROR_MAXFILES": "Число фотографий не должно превышать %s",
+
+    "LG_COMS_SPAM_ALERT": "Ваша заявка принята. Наши редакторы постараются отреагировать как можно скорее.",
+    "LG_COMS_SELPARENT_VIEW": "Смотреть",
+    "LG_COMS_SELPARENT_FLUSH": "Сбросить",
+    "LG_COMS_MOVE_FROM_MAIN": "Убрать с главной",
+    "LG_COMS_MOVE_TO_MAIN": "На главную",
+
+    "LG_REVIEWS_MOVE_FROM_MAIN": "Убрать с главной",
+    "LG_REVIEWS_MOVE_TO_MAIN": "На главную",
+    "LG_REVIEWS_SPAM": "Ваша заявка принята. Наши редакторы постараются отреагировать как можно скорее.",
+
+    "LG_USERS_CONTACTS_ADDEDNEW": "Пользователь успешно добавлен в контакты",
+    "LG_USERS_CONTACTS_ERROR_ADDEDNEW": "Не удалось добавить пользователя в контакты",
+    "LG_USERS_CONTACTS_REMOVED": "Пользователь успешно удален из списка контактов",
+
+    "LG_RATING_VOTEMESS": "Ваша оценка:"
+}

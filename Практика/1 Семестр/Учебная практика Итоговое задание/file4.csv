@@ -1,0 +1,51 @@
+id;name;email;phonenumber;socialcredit;url
+1;SAV Entertainment;info@sav.ru;+7 (495) 111-22-33;4,8;sav.ru
+2;Пушкинский музей;tours@artsmuseum.ru;+7 (495) 222-33-44;4,9;artsmuseum.ru
+3;Городские мастерские;workshop@citycraft.ru;+7 (495) 333-44-55;4,5;citycraft.ru
+4;Большой театр;box-office@bolshoi.ru;+7 (495) 444-55-66;5;bolshoi.ru
+5;Москва Фестивальная;fest@moscow.ru;+7 (495) 555-66-77;4,7;moscowfest.ru
+6;РФС;info@rfs.ru;+7 (495) 666-77-88;4,6;rfs.ru
+7;Jazz Community;book@jazzcom.ru;+7 (495) 777-88-99;4,4;jazzcom.ru
+8;Музей космонавтики;info@kosmo-museum.ru;+7 (495) 888-99-00;4,8;kosmo-museum.ru
+9;Арт-Лаб;artlab@mail.ru;+7 (495) 999-00-11;4,3;artlab.ru
+10;МХТ им. Чехова;tickets@mxat.ru;+7 (495) 100-20-30;4,9;mxat.ru
+11;Food Fest Group;partners@foodfest.ru;+7 (495) 200-30-40;4,2;foodfest.ru
+12;Спорт для всех;events@sportforall.ru;+7 (495) 300-40-50;4,1;sportforall.ru
+13;Филармония;box-office@philharmonia.ru;+7 (495) 400-50-60;4,9;philharmonia.ru
+14;Галерея современного искусства;info@modernartgallery.ru;+7 (495) 500-60-70;4;modernartgallery.ru
+15;IT Академия;courses@it-academy.ru;+7 (495) 600-70-80;4,7;it-academy.ru
+16;Театр Наций;office@theatreofnations.ru;+7 (495) 700-80-90;4,8;theatreofnations.ru
+17;VR Technologies;event@vr-tech.ru;+7 (495) 800-90-10;4,6;vr-tech.ru
+18;Yoga Space;yoga@yogaspace.ru;+7 (495) 900-10-20;4,5;yogaspace.ru
+19;Камерная музыка;info@chambermusic.ru;+7 (495) 010-20-30;4,7;chambermusic.ru
+20;Фотоцентр;exhibition@photocenter.ru;+7 (495) 020-30-40;4,3;photocenter.ru
+21;Кулинарная студия;chef@cookingstudio.ru;+7 (495) 030-40-50;4,8;cookingstudio.ru
+22;Jazz Night Club;booking@jazznight.ru;+7 (495) 040-50-60;4,4;jazznight.ru
+23;Союз художников;sculptor@artistunion.ru;+7 (495) 050-60-70;4,2;artistunion.ru
+24;Актерская студия;training@actorstudio.ru;+7 (495) 060-70-80;4,6;actorstudio.ru
+25;Беговой клуб;run@runningclub.ru;+7 (495) 070-80-90;4,5;runningclub.ru
+26;Этника;worldmusic@ethnica.ru;+7 (495) 080-90-10;4,3;ethnica.ru
+27;Политехнический музей;science@polymus.ru;+7 (495) 090-10-20;4,8;polymus.ru
+28;Дизайн-бюро;workshop@designbureau.ru;+7 (495) 101-20-30;4,7;designbureau.ru
+29;Поэтический клуб;poetry@poetryclub.ru;+7 (495) 202-30-40;4,1;poetryclub.ru
+30;Шахматная федерация;tournament@chessfed.ru;+7 (495) 303-40-50;4,9;chessfed.ru
+31;Хоровое общество;chorus@choir.ru;+7 (495) 404-50-60;4,4;choir.ru
+32;Музей Востока;japan@orientmuseum.ru;+7 (495) 505-60-70;4,6;orientmuseum.ru
+33;Танцевальная школа;salsa@danceschool.ru;+7 (495) 606-70-80;4,5;danceschool.ru
+34;Comedy Club;standup@comedyclub.ru;+7 (495) 707-80-90;4,8;comedyclub.ru
+35;Пляжный спорт;beach@sportbeach.ru;+7 (495) 808-90-10;4,3;sportbeach.ru
+36;Органный зал;concert@organhall.ru;+7 (495) 909-10-20;4,9;organhall.ru
+37;Исторический музей;costume@historymuseum.ru;+7 (495) 010-20-30;4,7;historymuseum.ru
+38;Гончарная мастерская;pottery@claystudio.ru;+7 (495) 111-21-31;4,6;claystudio.ru
+39;Karaoke Star;karaoke@star.ru;+7 (495) 212-31-41;4,2;karaokestar.ru
+40;Велоэкскурсии;bike@tour.ru;+7 (495) 313-41-51;4,4;biketour.ru
+41;Фолк-центр;folk@folkcenter.ru;+7 (495) 414-51-61;4,3;folkcenter.ru
+42;Архитектурный музей;maquette@archmuseum.ru;+7 (495) 515-61-71;4,5;archmuseum.ru
+43;Школа рисования;sketch@drawingschool.ru;+7 (495) 616-71-81;4,7;drawingschool.ru
+44;Quiz Time;quiz@quiztime.ru;+7 (495) 717-81-91;4,5;quiztime.ru
+45;Плавательный клуб;swim@swimclub.ru;+7 (495) 818-91-01;4,6;swimclub.ru
+46;Cover Band Agency;cover@bandagency.ru;+7 (495) 919-01-11;4,4;bandagency.ru
+47;Мир миниатюр;mini@miniworld.ru;+7 (495) 020-11-21;4,2;miniworld.ru
+48;Ораторский клуб;speaker@publicspeaking.ru;+7 (495) 121-21-31;4,8;publicspeaking.ru
+49;Dance Factory;party@dancefactory.ru;+7 (495) 222-31-41;4,3;dancefactory.ru
+50;"Скалодром ""Вершина""";climb@climbingtop.ru;+7 (495) 323-41-51;4,7;climbingtop.ru

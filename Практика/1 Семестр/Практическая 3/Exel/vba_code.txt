@@ -1,0 +1,81 @@
+Attribute VB_Name = "InvestmentMacros"
+' Макросы для финансовой модели
+
+Sub ExportInvestmentReport()
+    Application.ScreenUpdating = False
+    Application.Calculate
+    
+    ThisWorkbook.RefreshAll
+    
+    Dim projectName As String
+    projectName = ThisWorkbook.Worksheets("Ввод").Range("B3").Value
+    If projectName = "" Then projectName = "Проект"
+    
+    projectName = CleanFileName(projectName)
+    
+    Dim fileName As String
+    fileName = "ИнвестОтчёт_" & projectName & "_" & Format(Now, "dd.mm.yyyy") & ".pdf"
+    
+    Dim fullPath As String
+    If ThisWorkbook.Path <> "" Then
+        fullPath = ThisWorkbook.Path & "" & fileName
+    Else
+        fullPath = Environ("USERPROFILE") & "\Desktop" & fileName
+    End If
+    
+    On Error GoTo ExportError
+    ThisWorkbook.Worksheets("Отчёт").ExportAsFixedFormat _
+        Type:=xlTypePDF, _
+        FileName:=fullPath, _
+        Quality:=xlQualityStandard
+    
+    CreateArchiveSheet
+    
+    Application.ScreenUpdating = True
+    MsgBox "Отчёт успешно экспортирован!" & vbNewLine & _
+           "Файл: " & fileName, vbInformation
+    Exit Sub
+    
+ExportError:
+    Application.ScreenUpdating = True
+    MsgBox "Ошибка при экспорте: " & Err.Description, vbCritical
+End Sub
+
+Sub CreateArchiveSheet()
+    Dim archiveSheet As Worksheet
+    Dim archiveName As String
+    archiveName = "Архив_" & Format(Now, "dd.mm.yyyy HH-MM-SS")
+    
+    On Error Resume Next
+    Set archiveSheet = ThisWorkbook.Worksheets(archiveName)
+    On Error GoTo 0
+    
+    If Not archiveSheet Is Nothing Then
+        archiveName = "Архив_" & Format(Now, "dd.mm.yyyy HH-MM-SS") & Format(Timer, "000")
+    End If
+    
+    Set archiveSheet = ThisWorkbook.Worksheets.Add(After:=Worksheets(Worksheets.Count))
+    archiveSheet.Name = archiveName
+    
+    ThisWorkbook.Worksheets("Расчёты").UsedRange.Copy
+    archiveSheet.Range("A1").PasteSpecial Paste:=xlPasteValues
+    archiveSheet.Range("A1").PasteSpecial Paste:=xlPasteFormats
+    
+    archiveSheet.Range("A1").Value = "АРХИВ РАСЧЁТОВ - " & Format(Now, "dd.mm.yyyy HH:MM:SS")
+    archiveSheet.Range("A1").Font.Bold = True
+    
+    archiveSheet.Protect Password:="123"
+    Application.CutCopyMode = False
+    MsgBox "Создан архив: " & archiveName, vbInformation
+End Sub
+
+Function CleanFileName(originalName As String) As String
+    Dim invalidChars As String
+    Dim i As Integer
+    invalidChars = "\/:*?""<>|"
+    CleanFileName = originalName
+    For i = 1 To Len(invalidChars)
+        CleanFileName = Replace(CleanFileName, Mid(invalidChars, i, 1), "")
+    Next i
+    CleanFileName = WorksheetFunction.Trim(CleanFileName)
+End Function

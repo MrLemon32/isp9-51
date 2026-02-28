@@ -1,0 +1,21 @@
+﻿1CV8LOG(ver 2.0)
+9f9dbaa5-7b80-4f0f-91e2-acbe4087a35a
+
+{1,071523a4-516f-4fce-ba4b-0d11ab7a1893,"",1},
+{2,"Asus",1},
+{3,"Designer",1},
+{4,"_$Session$_.Authentication",1},
+{13,1,1},
+{4,"_$Session$_.Start",2},
+{4,"_$InfoBase$_.RestoreStart",3},
+{4,"_$Session$_.Finish",4},
+{4,"_$InfoBase$_.ConfigUpdate",5},
+{4,"_$InfoBase$_.DBConfigUpdateStart",6},
+{4,"_$InfoBase$_.ExclusiveModeChange",7},
+{4,"_$InfoBase$_.PredefinedDataUpdate",8},
+{5,7eb4adc0-d078-453d-a80c-01a6cb9c2f08,"",1},
+{4,"_$InfoBase$_.DBConfigUpdate",9},
+{4,"_$Access$_.Access",10},
+{3,"1CV8C",2},
+{3,"WebSocket",3},
+{3,"BackgroundJob",4}

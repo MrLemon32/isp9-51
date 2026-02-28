@@ -1,0 +1,20 @@
+﻿1CV8LOG(ver 2.0)
+070628ef-54a0-4be0-94ef-107d1d7f34da
+
+{1,071523a4-516f-4fce-ba4b-0d11ab7a1893,"",1},
+{2,"HTPC",1},
+{3,"Designer",1},
+{4,"_$Session$_.Authentication",1},
+{13,1,1},
+{4,"_$Session$_.Start",2},
+{4,"_$InfoBase$_.ConfigUpdate",3},
+{4,"_$InfoBase$_.DBConfigUpdateStart",4},
+{4,"_$InfoBase$_.DBConfigUpdate",5},
+{4,"_$Access$_.Access",6},
+{3,"1CV8C",2},
+{4,"_$Session$_.Finish",7},
+{3,"BackgroundJob",3},
+{4,"_$InfoBase$_.DumpStart",8},
+{4,"_$InfoBase$_.DumpFinish",9},
+{2,"Asus",2},
+{13,2,1}

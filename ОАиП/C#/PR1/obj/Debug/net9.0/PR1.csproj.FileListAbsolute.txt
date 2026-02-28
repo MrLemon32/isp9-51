@@ -1,0 +1,14 @@
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\bin\Debug\net9.0\PR1.exe
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\bin\Debug\net9.0\PR1.deps.json
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\bin\Debug\net9.0\PR1.runtimeconfig.json
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\bin\Debug\net9.0\PR1.dll
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\bin\Debug\net9.0\PR1.pdb
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.GeneratedMSBuildEditorConfig.editorconfig
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.AssemblyInfoInputs.cache
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.AssemblyInfo.cs
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.csproj.CoreCompileInputs.cache
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.dll
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\refint\PR1.dll
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.pdb
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\PR1.genruntimeconfig.cache
+d:\COLLEGE\2 курс\ОАиП\C#\PR1\obj\Debug\net9.0\ref\PR1.dll
