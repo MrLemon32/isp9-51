@@ -1,4 +1,12 @@
 # isp9-51
-28.02.2026
-android studio
-audio
+#Есть:
+#КС
+#МДК
+#ОАиП
+#ОСсАСС
+#Шаболоны:
+#Docx
+#pptx
+#Нужно:
+#1C
+#Android Studio
