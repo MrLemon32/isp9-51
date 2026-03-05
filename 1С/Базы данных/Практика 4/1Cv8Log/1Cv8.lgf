@@ -18,4 +18,8 @@
 {4,"_$Access$_.Access",10},
 {3,"1CV8C",2},
 {3,"WebSocket",3},
-{3,"BackgroundJob",4}
+{3,"BackgroundJob",4},
+{2,"HTPC",2},
+{13,2,1},
+{4,"_$InfoBase$_.DumpStart",11},
+{4,"_$InfoBase$_.DumpFinish",12}
