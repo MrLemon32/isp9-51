@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PW3</string>
+    <string name="hello_world_text">0</string>
+    <string name="random_heading">Это случайное число между 0 и %1$d</string>
+    <string name="title_activity_second">SecondActivity</string>
+</resources>
