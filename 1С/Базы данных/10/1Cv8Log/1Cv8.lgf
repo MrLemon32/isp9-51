@@ -15,4 +15,8 @@
 {4,"_$InfoBase$_.DBConfigUpdate",8},
 {4,"_$Access$_.Access",9},
 {3,"1CV8C",2},
-{4,"_$User$_.NewError",10}
+{4,"_$User$_.NewError",10},
+{4,"_$User$_.New",11},
+{4,"_$Session$_.AuthenticationError",12},
+{1,1a85b167-f1ab-4956-b0fd-fb1f4f95bc0b,"Admin",2},
+{13,1,2}
