@@ -1,0 +1,228 @@
+USE [master]
+GO
+/****** Object:  Database [Практическая_1]    Script Date: 11.03.2026 8:07:05 ******/
+GO
+USE [Практическая_1]
+GO
+/****** Object:  UserDefinedDataType [dbo].[phone]    Script Date: 11.03.2026 8:07:06 ******/
+CREATE TYPE [dbo].[phone] FROM [nchar](12) NULL
+GO
+/****** Object:  Table [dbo].[City]    Script Date: 11.03.2026 8:07:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[City](
+	[idCity] [int] IDENTITY(1,1) NOT NULL,
+	[CityName] [nvarchar](20) NOT NULL,
+ CONSTRAINT [PK_City_1] PRIMARY KEY CLUSTERED 
+(
+	[idCity] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Customer]    Script Date: 11.03.2026 8:07:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customer](
+	[idCust] [int] IDENTITY(1,1) NOT NULL,
+	[FName] [nvarchar](50) NOT NULL,
+	[LName] [nvarchar](50) NOT NULL,
+	[idCity] [int] NOT NULL,
+	[Adress] [nvarchar](100) NOT NULL,
+	[Zip] [nchar](6) NOT NULL,
+	[Phone] [dbo].[phone] NULL,
+ CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED 
+(
+	[idCust] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Order]    Script Date: 11.03.2026 8:07:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Order](
+	[idOrd] [int] IDENTITY(1,1) NOT NULL,
+	[idCust] [int] NOT NULL,
+	[OrdDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Order] PRIMARY KEY CLUSTERED 
+(
+	[idOrd] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[OrdItem]    Script Date: 11.03.2026 8:07:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrdItem](
+	[idOrd] [int] NOT NULL,
+	[idProduct] [int] NOT NULL,
+	[Qty] [int] NOT NULL,
+	[Price] [decimal](10, 2) NOT NULL,
+ CONSTRAINT [PK_OrdItem] PRIMARY KEY CLUSTERED 
+(
+	[idOrd] ASC,
+	[idProduct] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 11.03.2026 8:07:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Product](
+	[idProduct] [int] IDENTITY(1,1) NOT NULL,
+	[Description] [nvarchar](100) NOT NULL,
+	[InStock] [int] NOT NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[idProduct] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[City] ON 
+GO
+INSERT [dbo].[City] ([idCity], [CityName]) VALUES (4, N'eee')
+GO
+INSERT [dbo].[City] ([idCity], [CityName]) VALUES (2, N'wef')
+GO
+INSERT [dbo].[City] ([idCity], [CityName]) VALUES (1, N'werr')
+GO
+SET IDENTITY_INSERT [dbo].[City] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Customer] ON 
+GO
+INSERT [dbo].[Customer] ([idCust], [FName], [LName], [idCity], [Adress], [Zip], [Phone]) VALUES (7, N'svsdv', N'sdf', 1, N'sdssfd', N'234322', N'w23423      ')
+GO
+SET IDENTITY_INSERT [dbo].[Customer] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Order] ON 
+GO
+INSERT [dbo].[Order] ([idOrd], [idCust], [OrdDate]) VALUES (4, 7, CAST(N'2025-11-05T11:46:00.073' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Order] OFF
+GO
+INSERT [dbo].[OrdItem] ([idOrd], [idProduct], [Qty], [Price]) VALUES (4, 1, 21, CAST(12.00 AS Decimal(10, 2)))
+GO
+SET IDENTITY_INSERT [dbo].[Product] ON 
+GO
+INSERT [dbo].[Product] ([idProduct], [Description], [InStock]) VALUES (1, N'sdf', 123)
+GO
+SET IDENTITY_INSERT [dbo].[Product] OFF
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_CityName]    Script Date: 11.03.2026 8:07:06 ******/
+ALTER TABLE [dbo].[City] ADD  CONSTRAINT [IX_CityName] UNIQUE NONCLUSTERED 
+(
+	[CityName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ_Customer]    Script Date: 11.03.2026 8:07:06 ******/
+ALTER TABLE [dbo].[Customer] ADD  CONSTRAINT [UQ_Customer] UNIQUE NONCLUSTERED 
+(
+	[Phone] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Description]    Script Date: 11.03.2026 8:07:06 ******/
+ALTER TABLE [dbo].[Product] ADD  CONSTRAINT [IX_Description] UNIQUE NONCLUSTERED 
+(
+	[Description] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Order] ADD  CONSTRAINT [DF_Order_OrdDate]  DEFAULT (getdate()) FOR [OrdDate]
+GO
+ALTER TABLE [dbo].[Product] ADD  CONSTRAINT [DF_Product_InStock]  DEFAULT ((0)) FOR [InStock]
+GO
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD  CONSTRAINT [FK_Customer_City] FOREIGN KEY([idCity])
+REFERENCES [dbo].[City] ([idCity])
+GO
+ALTER TABLE [dbo].[Customer] CHECK CONSTRAINT [FK_Customer_City]
+GO
+ALTER TABLE [dbo].[Order]  WITH CHECK ADD  CONSTRAINT [FK_Order_Customer] FOREIGN KEY([idCust])
+REFERENCES [dbo].[Customer] ([idCust])
+GO
+ALTER TABLE [dbo].[Order] CHECK CONSTRAINT [FK_Order_Customer]
+GO
+ALTER TABLE [dbo].[OrdItem]  WITH CHECK ADD  CONSTRAINT [FK_OrdItem_Order] FOREIGN KEY([idOrd])
+REFERENCES [dbo].[Order] ([idOrd])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[OrdItem] CHECK CONSTRAINT [FK_OrdItem_Order]
+GO
+ALTER TABLE [dbo].[OrdItem]  WITH CHECK ADD  CONSTRAINT [FK_OrdItem_Product] FOREIGN KEY([idProduct])
+REFERENCES [dbo].[Product] ([idProduct])
+GO
+ALTER TABLE [dbo].[OrdItem] CHECK CONSTRAINT [FK_OrdItem_Product]
+GO
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD  CONSTRAINT [CK_Zip] CHECK  (([zip] like '[0-9][0-9][0-9][0-9][0-9][0-9]'))
+GO
+ALTER TABLE [dbo].[Customer] CHECK CONSTRAINT [CK_Zip]
+GO
+ALTER TABLE [dbo].[OrdItem]  WITH CHECK ADD  CONSTRAINT [CK_Price] CHECK  (([Price]>(0)))
+GO
+ALTER TABLE [dbo].[OrdItem] CHECK CONSTRAINT [CK_Price]
+GO
+ALTER TABLE [dbo].[OrdItem]  WITH CHECK ADD  CONSTRAINT [CK_Qty] CHECK  (([Qty]>(0)))
+GO
+ALTER TABLE [dbo].[OrdItem] CHECK CONSTRAINT [CK_Qty]
+GO
+ALTER TABLE [dbo].[Product]  WITH CHECK ADD  CONSTRAINT [CK_InStock] CHECK  (([Instock]>=(0)))
+GO
+ALTER TABLE [dbo].[Product] CHECK CONSTRAINT [CK_InStock]
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Уникальный идентификационный номер города' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'City', @level2type=N'COLUMN',@level2name=N'idCity'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Название города' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'City', @level2type=N'COLUMN',@level2name=N'CityName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Уникальный идентификационный номер клиента, на который можно ссылаться в других таблицах' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'idCust'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Имя клиента' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'FName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Фамилия клиента' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'LName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ссылка на номер города' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'idCity'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Адрес клиента' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'Adress'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Почтовый индекс клиента' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'Zip'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Телефонный номер клиента' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'COLUMN',@level2name=N'Phone'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ограничение на значения почтового индекса' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customer', @level2type=N'CONSTRAINT',@level2name=N'CK_Zip'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Уникальный идентификационный номер заказа' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order', @level2type=N'COLUMN',@level2name=N'idOrd'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ссылка на номер клиента' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order', @level2type=N'COLUMN',@level2name=N'idCust'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Дата и время размещения заказа' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order', @level2type=N'COLUMN',@level2name=N'OrdDate'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ссылка на номер заказа' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'OrdItem', @level2type=N'COLUMN',@level2name=N'idOrd'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ссылка на номер товара' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'OrdItem', @level2type=N'COLUMN',@level2name=N'idProduct'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Количество единиц товара в заказе' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'OrdItem', @level2type=N'COLUMN',@level2name=N'Qty'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Цена товара' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'OrdItem', @level2type=N'COLUMN',@level2name=N'Price'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Уникальный идентификационный номер для каждого товара.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Product', @level2type=N'COLUMN',@level2name=N'idProduct'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Короткое текстовое описание товара' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Product', @level2type=N'COLUMN',@level2name=N'Description'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Количество единиц продукта на складе' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Product', @level2type=N'COLUMN',@level2name=N'InStock'
+GO
+USE [master]
+GO
+ALTER DATABASE [Практическая_1] SET  READ_WRITE 
+GO
